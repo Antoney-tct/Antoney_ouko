@@ -208,7 +208,7 @@
             width: 100%;
             height: 100%;
             border-radius: 50%;
-            background: url('https://images.unsplash.com/photo-1536104968055-4d61aa56f46a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=880&q=80') center/cover;
+            background: url('photos/photo2.jpg') center/cover;
             border: 10px solid var(--dark);
             animation: pulse 3s ease-in-out infinite;
         }
@@ -330,78 +330,7 @@
             opacity: 0.7;
         }
         
-        /* Contact Section */
-        .contact-container {
-            display: flex;
-            gap: 4rem;
-        }
-        
-        .contact-form {
-            flex: 1;
-            background: rgba(255, 255, 255, 0.05);
-            padding: 2.5rem;
-            border-radius: 15px;
-        }
-        
-        .form-group {
-            margin-bottom: 1.5rem;
-        }
-        
-        .form-group label {
-            display: block;
-            margin-bottom: 0.5rem;
-            font-weight: 500;
-        }
-        
-        .form-group input,
-        .form-group textarea {
-            width: 100%;
-            padding: 0.8rem 1.2rem;
-            background: rgba(255, 255, 255, 0.07);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 8px;
-            color: var(--light);
-            font-family: 'Poppins', sans-serif;
-            font-size: 1rem;
-            transition: var(--transition);
-        }
-        
-        .form-group input:focus,
-        .form-group textarea:focus {
-            outline: none;
-            border-color: var(--primary);
-            background: rgba(108, 99, 255, 0.1);
-        }
-        
-        .contact-info {
-            flex: 1;
-        }
-        
-        .info-item {
-            display: flex;
-            align-items: center;
-            margin-bottom: 2rem;
-        }
-        
-        .info-icon {
-            width: 60px;
-            height: 60px;
-            background: rgba(108, 99, 255, 0.2);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            margin-right: 1.5rem;
-            color: var(--primary);
-            transition: var(--transition);
-        }
-        
-        .info-item:hover .info-icon {
-            background: var(--primary);
-            color: white;
-            transform: scale(1.1);
-        }
+       
         
         /* Footer */
         footer {
@@ -516,15 +445,190 @@
                 display: none;
             }
         }
+
+        /* New Newsletter Section Styles */
+        .newsletter {
+            background: linear-gradient(135deg, #1a0b45, #2c1a7a);
+            padding: 6rem 10%;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .newsletter::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(108, 99, 255, 0.1) 0%, rgba(255,255,255,0) 70%);
+            z-index: 0;
+            animation: rotate 20s linear infinite;
+        }
+        
+        .newsletter-content {
+            position: relative;
+            z-index: 2;
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 3rem;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+        }
+        
+        .newsletter h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(45deg, #ff7eb3, #ff758c);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .newsletter p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 2.5rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .subscribe-form {
+            display: flex;
+            gap: 1rem;
+            max-width: 550px;
+            margin: 0 auto;
+        }
+        
+        .email-input {
+            flex: 1;
+            padding: 1.2rem 1.5rem;
+            background: rgba(255, 255, 255, 0.08);
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            border-radius: 50px;
+            color: white;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+        }
+        
+        .email-input:focus {
+            outline: none;
+            border-color: #ff7eb3;
+            background: rgba(255, 126, 179, 0.1);
+            box-shadow: 0 0 20px rgba(255, 126, 179, 0.3);
+        }
+        
+        .subscribe-btn {
+            padding: 1.2rem 2.5rem;
+            background: linear-gradient(45deg, #ff7eb3, #ff758c);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 20px rgba(255, 117, 140, 0.3);
+        }
+        
+        .subscribe-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(255, 117, 140, 0.4);
+            background: linear-gradient(45deg, #ff758c, #ff7eb3);
+        }
+        
+        .benefits {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 3rem;
+            flex-wrap: wrap;
+        }
+        
+        .benefit-item {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            background: rgba(108, 99, 255, 0.15);
+            padding: 0.8rem 1.5rem;
+            border-radius: 50px;
+            font-size: 0.95rem;
+            animation: float 4s ease-in-out infinite;
+        }
+        
+        .benefit-item:nth-child(2) {
+            animation-delay: 0.5s;
+        }
+        
+        .benefit-item:nth-child(3) {
+            animation-delay: 1s;
+        }
+        
+        .benefit-icon {
+            color: #ff7eb3;
+            font-size: 1.2rem;
+        }
+        
+        .success-message {
+            margin-top: 1.5rem;
+            padding: 1rem;
+            background: rgba(40, 167, 69, 0.15);
+            border: 1px solid rgba(40, 167, 69, 0.3);
+            border-radius: 8px;
+            color: #28a745;
+            display: none;
+            animation: fadeIn 0.5s ease;
+        }
+        
+        @keyframes rotate {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .subscribe-form {
+                flex-direction: column;
+            }
+            
+            .email-input, .subscribe-btn {
+                width: 100%;
+            }
+            
+            .benefits {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    
     </style>
 </head>
 <body>
     <!-- Header -->
     <header>
-        <div class="logo">Portfolio.</div>
+        <div class="logo">Antoney-Tct.</div>
         <nav>
             <ul>
-                <li><a href="#home">Home</a></li>
+                <li><a href="#home">Dashboard</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#portfolio">Portfolio</a></li>
                 <li><a href="#contact">Contact</a></li>
@@ -541,11 +645,12 @@
     <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="hero-content">
-            <h1>Hello, I'm <span class="highlight">Alex Morgan</span><br>Creative <span class="highlight">Designer</span> & Developer</h1>
+            <h1>Hello, I'm <span class="highlight">Antoney Ouko</span><br>Creative <span class="highlight">Designer</span> & Developer</h1>
             <p>I create beautiful, functional digital experiences that bring ideas to life. Let's build something amazing together.</p>
-            <a href="#portfolio" class="cta-button">View My Work <i class="fas fa-arrow-right"></i></a>
+          
         </div>
         <div class="hero-image"></div>
+        <a href="Antoney_ouko.html" class="cta-button">View my compitance <i class="fas fa-arrow-right"></i></a>
     </section>
 
     <!-- About Section -->
@@ -610,67 +715,49 @@
     <!-- Contact Section -->
     <section class="section" id="contact">
         <h2 class="section-title">Get In Touch</h2>
-        <div class="contact-container">
-            <div class="contact-form">
-                <div class="form-group">
-                    <label for="name">Name</label>
-                    <input type="text" id="name" placeholder="Enter your name">
-                </div>
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" placeholder="Enter your email">
-                </div>
-                <div class="form-group">
-                    <label for="message">Message</label>
-                    <textarea id="message" rows="5" placeholder="Your message here"></textarea>
-                </div>
-                <button class="cta-button">Send Message</button>
+       
+    </section>
+  <!-- Newsletter Section -->
+  <section class="newsletter">
+    <div class="newsletter-content">
+        <h2>Stay Updated</h2>
+        <p>Subscribe to my newsletter to receive updates on my latest projects, design tips, and exclusive content. No spam, just valuable insights!</p>
+        
+        <form class="subscribe-form" id="newsletterForm">
+            <input type="email" class="email-input" placeholder="Your email address" required>
+            <button type="submit" class="subscribe-btn">Subscribe</button>
+        </form>
+        
+        <div class="success-message" id="successMessage">
+            <i class="fas fa-check-circle"></i> Thank you for subscribing! Please check your email to confirm.
+        </div>
+        
+        <div class="benefits">
+            <div class="benefit-item">
+                <i class="fas fa-gift benefit-icon"></i>
+                <span>Exclusive content</span>
             </div>
-            
-            <div class="contact-info">
-                <div class="info-item">
-                    <div class="info-icon">
-                        <i class="fas fa-map-marker-alt"></i>
-                    </div>
-                    <div>
-                        <h3>Location</h3>
-                        <p>San Francisco, CA</p>
-                    </div>
-                </div>
-                
-                <div class="info-item">
-                    <div class="info-icon">
-                        <i class="fas fa-envelope"></i>
-                    </div>
-                    <div>
-                        <h3>Email</h3>
-                        <p>hello@portfolio.com</p>
-                    </div>
-                </div>
-                
-                <div class="info-item">
-                    <div class="info-icon">
-                        <i class="fas fa-phone"></i>
-                    </div>
-                    <div>
-                        <h3>Phone</h3>
-                        <p>+1 (555) 123-4567</p>
-                    </div>
-                </div>
+            <div class="benefit-item">
+                <i class="fas fa-bolt benefit-icon"></i>
+                <span>Early access to projects</span>
+            </div>
+            <div class="benefit-item">
+                <i class="fas fa-lock benefit-icon"></i>
+                <span>No spam, unsubscribe anytime</span>
             </div>
         </div>
-    </section>
-
+    </div>
+</section>
     <!-- Footer -->
     <footer>
-        <div class="footer-logo">Portfolio.</div>
+        <div class="footer-logo">Antoney ouko.</div>
         <div class="social-icons">
             <a href="#"><i class="fab fa-github"></i></a>
             <a href="#"><i class="fab fa-linkedin-in"></i></a>
             <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-dribbble"></i></a>
+            <a href="#"><i class="fab fa-facebook"></i></a>
         </div>
-        <p class="copyright">© 2023 Alex Morgan. All rights reserved.</p>
+        <p class="copyright">© 2025 Antoney ouko. All rights reserved.</p>
     </footer>
 
     <script>
@@ -705,5 +792,37 @@
             alert('Form submitted! (This is a demo)');
         });
     </script>
+      <script>
+        // Newsletter Form Submission
+        document.getElementById('newsletterForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Show success message
+            const successMessage = document.getElementById('successMessage');
+            successMessage.style.display = 'block';
+            
+            // Reset form
+            this.reset();
+            
+            // Hide message after 5 seconds
+            setTimeout(() => {
+                successMessage.style.display = 'none';
+            }, 5000);
+        });
+        
+        // Floating animation for benefit items
+        document.querySelectorAll('.benefit-item').forEach((item, index) => {
+            item.style.animationDelay = `${index * 0.3}s`;
+        });
+    </script>
 </body>
 </html>
+
+    
+
+    
+  
+    
+    
+    
+  
